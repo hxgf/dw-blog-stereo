@@ -7,7 +7,7 @@ Darkwave documentation: [http://darkwave.ltd/](http://darkwave.ltd/)
 
 ### Installation
 
-1\. Install the files *(copy them from this repository the corresponding directories in your project)*
+1\. Copy the files from this repository the corresponding directories in your project.
 
 2\. Create a new table in your database
 ```
