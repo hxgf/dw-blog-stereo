@@ -17,6 +17,7 @@ $app->get('/blog', function(){
 	if ($_articles['data']){
 		foreach($_articles['data'] as $a){
 			$a['screenname'] = $users[$a['user_id']]['screenname'];
+			$a['body'] = html_entity_decode($a['body']);
 			$articles[$a['_id']] = $a;
 		}		
 	}
@@ -52,6 +53,7 @@ $app->get('/blog/[*:url_slug]', function($url_slug){
 
 	$data = $_data['data'][0];
 	$data['screenname'] = $_users['data'][0]['screenname'];
+	$data['body'] = html_entity_decode($data['body']);
 
 	$GLOBALS['app']->render_template(array(
 		'template' => 'blog-detail',
